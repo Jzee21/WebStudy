@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <!-- <style type="text/css">
+    	/* @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css"); */
+    	/* @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css'); */
+    	@import "../../css/normalize.css"
+    </style> -->
+    <!-- <link rel="stylesheet" href="../../css/normalize.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/myStyle.css" /> -->
+	<title></title>
+	<script type="text/javascript">
+		function myNum() {
+			var x= 100;
+			var y= 200;
+			var z= "30";
+			
+			var num = eval("x+y") + "<br>";
+			
+			document.getElementById("demo").innerHTML = num;
+			
+			var willEval= "";
+			willEval += 'var number = 10;';
+			willEval += 'alert(number);';
+			
+			eval(willEval);
+			alert(number + 100);
+			
+			var strNum = '30';
+			eval(strNum);
+			alert(eval(strNum) + number);
+			
+		}
+	</script>
+</head>
+<body>
+656777
+	.....<br>
+	<button onclick="myNum()">Click</button>
+	<p id="demo"></p>
+</body>
+</html>

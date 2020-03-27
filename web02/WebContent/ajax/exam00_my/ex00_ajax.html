@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+	<title></title>
+	
+	<script type="text/javascript">
+		$(function () {
+			$('#driver').click(function() {
+				$('#stage').load('test.html');
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>버튼 클릭 시 여기에 jQuery ajax 실행</p>
+	<div id="stage" style="background-color: gray;">
+		STAGE
+	</div>
+	<input type="button" id="driver" value="Load Drive" /><br>
+	여기 재로드 됬나요?<br>
+	확인하세요.
+</body>
+</html>

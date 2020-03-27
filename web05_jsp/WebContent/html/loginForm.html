@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Login Form</title>
+	<style type="text/css">
+		a:link { color: black; }
+		a:visited { color: black; }
+		a:hover { color: black; }
+	</style>
+</head>
+<body>
+	<h2>Login</h2>
+	<hr>
+	<table>
+		<form action="../LoginServlet" method="post" >
+			<tr>
+				<td>ID</td>
+				<td><input type="text" id="id" name="id" placeholder="id를 입력하세요."></td>
+			</tr>
+			<tr>
+				<td>PW</td>
+				<td><input type="password" id="pw" name="pw" placeholder="pw를 입력하세요."></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td align="right">
+					<input type="submit" value="전송">
+					<input type="reset" value="취소"></td>
+			</tr>
+		</form>
+	</table>
+</body>
+</html>

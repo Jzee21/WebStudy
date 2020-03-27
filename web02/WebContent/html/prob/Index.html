@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>자기소개 페이지</title>
+	<link rel="stylesheet" href="../../css/style_hgun.css">
+</head>
+<body>
+	<div id="divall">
+		<!--제목 표시 부분-->
+		<div>
+			<h1>자기소개 페이지</h1>
+		</div><br>
+		<!-- 내용 부분-->
+		<div>
+			<!-- 주요 내용 부분-->
+			<div>
+				<!-- 메뉴 부분-->
+				<div>
+					<ul>
+						<li><a href="home.html" target="iframe1">Home</a></li>
+						<li><a href="Time.html" target="iframe1">Time Table</a></li>
+						<li><a href="history.html" target="iframe1">History</a></li>
+						<li><a href="#Visitor">Visitor</a></li>
+						<li><a href="#Contact">Contact</a></li>
+					</ul>
+				</div>
+				<!-- 메뉴 밑 내용 부분-->
+				<div>
+					<iframe name="iframe1" src="home.html"></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- 방명록 부분 -->
+		<div>
+			<form id="Visitor" action="action_page.php" method="post">
+				<fieldset style="color:white">
+					<legend>Guest Book</legend>
+					Name:<br>
+					<input type="text" name="visit" size="10"><br>
+					Password:<br>
+					<input type="password" name="pwd" size="10"><br>
+					Contents:<br>
+					<textarea name="txt" rows="7" cols="30">이곳에 방명록을 입력하세요</textarea><br>
+					Secret<input type="checkbox" name="secret" value="1" checked><br>
+					<Input type="submit" name="input" value="입력">
+					<input type="reset" name="reset" value="취소">
+				</fieldset>
+			</form>
+		</div>
+		<!-- Contact 부분-->
+		<div id="Contact">
+			<p id="p1">Contact Me!</p>
+			<p id="con">C.P : 010-9611-7555<br>
+			E-mail : asdf0185@naver.com<br>
+			Github : <a id="git" href="https://github.com/TunaHG/TunaHG.github.io" target="_blank">MY Github Link</a><br>
+			Website(this page) : <a id="git" href="http://tunahg.github.io" target="_blank">My Website</a><br>
+			KakaoTalk ID : TunaRetio<br>
+		</p>
+		</div>
+	</div>
+</body>
+</html>

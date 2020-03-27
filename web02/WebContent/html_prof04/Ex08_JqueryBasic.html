@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+		#pet_form {
+			margin: 3px 3px ;
+			border : 2px solid yellow;
+			padding : 30px 50px;
+			
+			width : auto;
+		}
+		/* 
+		#btn1 { background-color: green; }
+		#btn2 { background-color: yellow; }
+		 */
+		
+	</style>
+	
+	<script type="text/javascript">
+		$(function () {
+			//
+			//
+			//
+			
+			/* 
+			if($('#myForm').children().is('input[type=submit]')) {
+				alert('True')
+			} else {
+				alert('False')
+			}
+			 */
+			$('#p_name').val("Cookie");
+			$('#p_age').val("8");
+			var str = $('#p_name').val() + ", " + $('#p_age').val() + "\n";
+			$('#tarea').val(str);
+			
+			//
+			$('#btn1').css('backgroundColor', 'green');
+			$('#btn2').css('backgroundColor', 'yellow');
+			
+			$('#btn0').click(function() {
+				var val = $('#p_name').val() + ", " + $('#p_age').val() + "\n";
+				$('#tarea').val( $('#tarea').val() + val );
+			});
+			
+			$('#btn1').click(function() {
+				$('#tarea').val( $('#tarea').val() + "포식이, 12\n" );
+				$(this).css('backgroundColor', 'green')
+			});
+			
+			$('#btn2').click(function() {
+				$('#tarea').val('');
+			});
+			
+		});
+		
+	</script>
+	
+</head>
+<body>
+	Textbox:<input type="text" id="txtname"><br>
+	RadioButton : <input type="radio" name="gender" value="M">남
+				  <input type="radio" name="gender" value="F">여
+	<br>
+	selectList:
+	<select id="isF" multiple="multiple">
+		<option value="java">자바</option>
+		<option value="jquery">웹</option>
+		<option value="spring">스프링</option>
+	</select>
+	<br>
+	Button:
+		<input type="button" value="확인" id="btnok">
+	<br>
+	<div id="myForm">
+		submitForm : <input type="submit" value="전송">
+	</div>
+	
+	<hr>
+	<div id="pet_form">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" id="p_name"><br></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="number" id="p_age"><br>
+			</td>
+		</table>
+		<input type="button" id="btn0" value="추가">
+		<input type="button" id="btn1" value="포식이">
+		<input type="button" id="btn2" value="지우기"><br>
+		<textarea rows="7" cols="30" id="tarea"></textarea>
+	</div>
+	
+</body>
+</html>

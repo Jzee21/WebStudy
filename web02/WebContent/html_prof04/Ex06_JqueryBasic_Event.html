@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		// = $(document).ready(function() { }); 
+	});
+	
+	$(document).ready(function() {
+		$('#btnCopy').click(function() {
+			$('#txtCopyUserId').val($('#txtUserid').val())
+		});
+		
+		$('#select_hobby').change(function() {
+			var selectedValue = $('#select_hobby option:selected').text();
+			$('#txtSelect').val(selectedValue);
+		});
+		
+		$('#txtpwd2').keyup(function() {
+			if( $('#txtpwd').val() == $('#txtpwd2').val() ) {
+				$('#message').text('일치');
+				$('#message').css('color', 'blue');
+				$('table').css('border', '1px solid blue');
+			}
+			else {
+				$('#message').text('불일치');
+				$('#message').css('color', 'red');
+				$('table').css('border', '1px solid red');
+			}
+		});
+		/* 
+		$('#submit').click(function () {
+			//alert('submit');
+			if ( $('#id').val() == '' ) {
+				$('#id').focus();
+				alert('id Please');
+				return false;
+			}
+			else if ( $('#name').val() == '' ) {
+				$('#name').focus();
+				alert('name Please');
+				return false;
+			}
+			else
+				return true;
+		})
+		 */
+		
+	 });
+	 
+	 
+	function checkit() {
+		//alert("check");
+		if ( $('#id').val() == '' ) {
+			alert('id Please');
+			$('#id').focus();
+			return false;
+		}
+		else if ( $('#name').val() == '' ) {
+			alert('name Please');
+			$('#name').focus();
+			return false;
+		}
+		else
+			return true;
+	}
+	
+	</script>
+</head>
+<body>
+<div>
+		ID:<input type="text" id="txtUserid">
+		<hr>
+		<input type="button" id="btnCopy" value="copy" >
+		<hr>
+		CopyID : <input type="text" id="txtCopyUserId">
+		<hr>
+		<select id="select_hobby">
+			<option value="01">java</option>
+			<option value="02">Jquery</option>
+			<option value="03">JDBC</option>
+		</select>
+		<hr>
+		<input type="text" id="txtSelect">
+		<hr>
+		<table style="border: 1px solid red;">
+			<tr>
+				<td>암호</td>
+				<td><input type="password" id="txtpwd" size="20" maxlength="5"></td>
+			</tr>		
+			<tr>
+				<td>암호확인</td>
+				<td><input type="password" id="txtpwd2" size="20" maxlength="5"></td>
+			</tr>		
+					
+		</table>
+		<div id="message" style="color: red"></div>
+		<hr>
+		<form onsubmit="return checkit()">
+			<input type="text" id="id" placeholder="id를 입력하세요"><br>
+			<input type="text" id="name" placeholder="이름을 입력하세요"><br><br>
+			<input type="submit" id="submit" value="전송">
+		</form>
+		
+		
+	</div>
+</body>
+</html>

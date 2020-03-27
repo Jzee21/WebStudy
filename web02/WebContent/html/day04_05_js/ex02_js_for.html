@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>For</title>
+</head>
+<body>
+	<script type="text/javascript">
+		for(var i=0 ; i<11 ; i++) {
+			document.write(i + "*" + i + "=" + i*i + "<br>");
+		}
+	</script>
+	<hr>
+	<script type="text/javascript">
+		var sum = 0;
+		for(var j=1 ; j<101 ; j++) {
+			if(j%3==0) sum += j;
+		}
+		document.write("1~100 사이의 3의 배수의 합 : " + sum);
+	</script>
+	<hr>
+	<script type="text/javascript">
+		document.write("구구단");
+		
+		document.write("<table>");
+		for(var i=1 ; i<10 ; i++) {
+			document.write("<tr>");
+			for(var j=2 ; j<10 ; j++) {
+				document.write("<th>" + j + "x" + i + "=" + j*i + "</th>");
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+	</script>
+</body>
+</html>

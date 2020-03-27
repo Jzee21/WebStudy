@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+	<title>...</title>
+	<style>
+        @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css")
+    </style>
+	<script type="text/javascript">
+		function change() {
+			/* document.getElementById("demo").innerText = "Now changed"; */
+			document.getElementById("demo").innerHTML = "Now changed";
+		}
+		
+		var list = '';
+		list += "<ul>";
+		list += "<li>Hello</li>";
+		list += "<li>Java</li>";
+		list += "<li>JSP JavaScript</li>";
+		
+		function add_ul(text) {
+			
+			if(text != null) {
+				list += "<li>" + text + "</li>";
+			}
+			
+			document.getElementById("demo").innerHTML = list + "</ul>";
+		}
+		
+		window.onload = function() {
+			/* var list = '';
+			list += "<ul>";
+			list += "<li>Hello</li>";
+			list += "<li>Java</li>";
+			list += "<li>JSP JavaScript</li>";
+			list += "</ul>"; */
+
+			/* document.getElementById("demo").innerHTML = list + "</ul>"; */
+			/* document.getElementById("demo").innerHTML = list; */
+			
+			add_ul();
+		}
+		
+		function add_name() {
+			add_ul(prompt("name"));
+		}
+		
+		function add_addr() {
+			add_ul(prompt("address"));
+		}
+		
+		function set_name() {
+			document.getElementById("name").innerHTML = prompt("name : ");
+		}
+		
+		function set_addr() {
+			document.getElementById("addr").innerHTML = prompt("address : ");
+		}
+		
+	</script>
+</head>
+<body>
+	.....<br />
+	<h5>What the.....</h5>
+	<div id="demo">Here will be change</div>
+	<h1 id="name">Name</h1>
+	<h1 id="addr">Address</h1>
+	<input type="button" value="Click" onclick="change()" />
+	<input type="button" value="Name" onclick="add_name()" />
+	<input type="button" value="Address" onclick="add_addr()" />
+	
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>...</title>
+	
+	<style type="text/css">
+		.monitor {
+			/* width: 200px; */
+			width: 100%;
+			text-align: right;
+		}
+		.btn {
+			width: 50px;
+		}
+		.btn_2 {
+			width: 100px;
+		}
+		.cal {
+			background-color: blue;
+			color: white;
+			
+		}
+	</style>
+	
+	<script type="text/javascript">
+		function count_increase() {
+			var spanObj = document.getElementById("countSapn");
+			spanObj.innerHTML = parseInt(spanObj.innerHTML) + 1;
+		}
+		
+		function clickNumber(data) {
+			var monitor = document.getElementById("monitor");
+			/* alert(data);
+			alert(monitor.value); */
+			if(data=="cls") {
+				monitor.value = '';
+			}
+			else if(data != "=") {
+				monitor.value += data;
+			}
+			else {
+				monitor.value = eval(monitor.value);
+			}
+		}
+		
+	</script>
+	
+</head>
+<body>
+	<span id="countSapn">0</span> 번 클릭 &nbsp;&nbsp;
+	<input type="button" value="click" onclick="count_increase()" >
+	<hr>
+	<table>
+		<tr>
+			<td colspan="4"><input class="monitor" value="0" type="text" id="monitor" ></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input class="btn_2" type="button" value="cls" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="%" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="/" onclick="clickNumber(this.value)" /></td>
+		</tr>
+		<tr>
+			<td><input class="btn" type="button" value="7" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="8" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="9" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="*" onclick="clickNumber(this.value)" /></td>
+		</tr>
+		<tr>
+			<td><input class="btn" type="button" value="4" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="5" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="6" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="-" onclick="clickNumber(this.value)" /></td>
+		</tr>
+		<tr>
+			<td><input class="btn" type="button" value="1" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="2" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="3" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="+" onclick="clickNumber(this.value)" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input class="btn_2" type="button" value="0" onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn" type="button" value="." onclick="clickNumber(this.value)" /></td>
+			<td><input class="btn cal" type="button" value="=" onclick="clickNumber(this.value)" /></td>
+		</tr>
+		
+	
+	</table>
+	
+</body>
+</html>

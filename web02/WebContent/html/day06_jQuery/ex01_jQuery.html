@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<!--     
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js">
+	 -->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+	
+	<title>jQuery</title>
+	
+	<script type="text/javascript">
+		/*
+		// 1.
+		$(document).ready(function() {
+			alert('hi');
+		});
+		 */
+		 
+		/* 
+		// 2.
+		$(function() {
+			alert('hi2');
+		});
+		*/
+		
+		$(document).ready(function() {
+			//$('h1').hide();
+			//$('.c1').css('backgroundColor', 'yellow');
+			//$('h2.c2').css('backgroundColor', 'pink');
+			//$('h1:first').css('backgroundColor', 'gray');
+			//$('h1:last').css('backgroundColor', 'blue');
+			//$('h1 p').css('backgroundColor', 'skyblue');
+			$('h1, p').css('backgroundColor', 'skyblue');
+		});
+		
+	</script>
+</head>
+<body>
+	<h1 id="id1">Hello
+		<p>포함된 p태그</p>
+	</h1>
+	
+	<h2>12098387092378492</h2>
+	<h1 id="id2">빅데이터 6기 4반</h1>
+	
+	<div>
+		Ah ah~ Ah ah~
+	</div>
+	
+	<h1 class="c1">빅데이터 6기 4반</h1>
+	<h1 class="c2">빅데이터 6기 4반</h1>
+	<h2 class="c2">빅데이터 6기 4반</h2>
+	<h1 >빅데이터 6기 4반</h1>
+</body>
+</html>

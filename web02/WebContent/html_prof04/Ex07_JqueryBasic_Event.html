@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Key point</title>
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('p').each(function(index) {
+				console.log(this);
+				//$(this).attr({"id":"param_"+index})
+				$(this).attr('id', 'param_'+index);
+				
+			});
+			
+			var arr = [
+				{name:"naver", link:"https://www.naver.com"},
+				{name:"daum", link:"https://www.daum.net"},
+				{name:"google", link:"https://www.google.com"},
+			];
+			
+			$.each(arr, function (index, obj) {
+				console.log(index + "/" + obj + "/" + obj.name + "/" + obj.link);
+			});
+			
+			var link = '';
+			$.each(arr, function (index, obj) {
+				link += "<li>" + obj.name + " : " + obj.link + "</li>";
+			});
+			$('#siteUl').html(link);
+			
+		});
+	</script>
+</head>
+<body>
+	<p>java</p>
+	<p>jquery</p>
+	<p>Ajax</p>
+	<input type="button" value="click" id="btn">
+	<hr>
+	<span id="site"></span>
+	
+	<hr>
+	<ul id="siteUl">
+	
+	</ul>
+</body>
+</html>

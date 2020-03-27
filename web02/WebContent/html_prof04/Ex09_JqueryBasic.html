@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	
+	<title>Insert title here</title>
+	
+	<script type="text/javascript">
+		$(function () {
+			
+			$('button').click(function() {
+				$(this).replaceWith( '<div>' + $(this).text() + '</div>' );
+			});
+			
+			$('#btnEmpty').click(function() {
+				$('#mydiv').empty();
+				$('#mydiv').append('<b>hello</b>');
+			});
+			
+			$('#btnRemove').click(function() {
+				$('#mydiv').remove();
+			});
+			
+			$('#dbbtnclick').dblclick(function() {
+				var msg = $('#mydiv2').width() + "/" + $('#mydiv2').height();
+				console.log(msg);
+			});
+			
+			
+		});
+	
+	</script>
+		
+</head>
+<body>
+	<button>FirstButton</button>
+	<button>SecondButton</button>
+	<button>ThirdButton</button>
+	
+	<hr>
+	<input type="button" id="btnEmpty" value="empty"><br>
+	<input type="button" id="btnRemove" value="remove"><br>
+	<hr>
+	<div id="mydiv">
+		<p>java</p>
+		<p>jquery</p>
+	</div> 
+	<hr>
+	<div id="mydiv2">
+		<input type="button" id="dbbtnclick" value="전송">
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Up down Game</title>
+	<script type="text/javascript">
+		
+		// before
+		function game() {
+			
+			alert("new Game");
+			
+			this.number = Math.floor(Math.random() * 100) + 1;
+			this.count = 5;
+			
+			for (var i = 0; i < 5; i++) {
+				var val = prompt("숫자 1~100 사이의 숫자를 입력하세요. 남은 기회 : " + this.count, "");
+				
+				if (val < this.number)
+					alert("Up");
+				else if (val > this.number)
+					alert("down");
+				else {
+					alert("정답");
+					break;
+				}
+				count--;
+			}
+			alert(`정답은 ${this.number} 이었습니다.`);
+			
+		}
+		// game();
+
+		// after
+		var UpDown = {
+				random_num : 0,
+				count : 5,
+				area : '',
+				
+				newGame : function() {
+					this.random_num = Math.floor(Math.random() * 100) + 1;
+					this.count = 5;
+					this.area = '';
+					
+					document.getElementById("area").innerHTML = "Please Enter 1~100";
+					document.getElementById("input").innerHTML = "";
+					
+				},
+				
+				tryGame : function() {
+					var input = document.getElementById("input").value;
+					this.count--;
+					
+					if (input < this.random_num) {
+						this.area += input + " Up. 기회 : " + this.count + "\n";
+						document.getElementById("area").innerHTML = this.area; 
+					}
+					else if (input > this.random_num) {
+						this.area += input + " Down. 기회 : " + this.count + "\n";
+						document.getElementById("area").innerHTML = this.area;
+					}
+					else {
+						this.area += "정답입니다.";
+						document.getElementById("area").innerHTML = this.area;
+					}
+					
+					if (this.count == 0) {
+						this.area += "정답은 " + this.random_num + " 이었습니다.";
+						document.getElementById("area").innerHTML = this.area;
+					}
+					
+				}
+				
+		};
+		
+	</script>
+</head>
+<body onload="UpDown.newGame()">
+	<!-- <input type="button" value="new Game" onclick="game()" /> -->
+	<hr>
+	<div>
+		<input type="button" id="new" value="New Game" onclick="UpDown.newGame()"/>
+		<br>
+		<textarea rows="6" cols="20" id="area">Please Enter 1~100</textarea>
+		<br>
+		<input type="text" id="input" placeholder="Enter Here!" size=12/>
+		<input type="button" id="try_updown" value="입력" onclick="UpDown.tryGame()"/>
+	</div>
+
+</body>
+</html>

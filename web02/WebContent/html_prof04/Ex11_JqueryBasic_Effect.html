@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- 
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	 -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		$(function () {
+			$('#btn').click(function () {
+				$('#first').slideToggle('show');
+			});
+			
+			$('span.more').click(function() {
+				$('#moreRegion').animate({
+					// JSON
+					left:'200px',
+					opacity:'0.3',
+					//height:'200px',
+					//width:'200px',
+				}, 'slow'
+				);
+			});
+			
+		});
+	</script>
+</head>
+<body>
+<input type="button" id="btn" value="슬라이드 토글">
+	<div id="first" style="display: none;background-color:gold;height: 100px">
+		First
+	</div>
+	<hr>
+	<span class="more">MoreContent</span>
+	<div id="moreRegion" style="background-color: red ;height: 100px;width: 100px;position: absolute;">
+		First
+	</div>
+</body>
+</html>

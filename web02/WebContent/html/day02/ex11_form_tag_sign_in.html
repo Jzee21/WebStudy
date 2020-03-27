@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Form input tag</title>
+	<style type="text/css">
+		table {
+			margin-left: auto;
+	    	margin-right: auto;
+	    	
+	    	border-top: 1px solid #444444;
+	    	
+	    	background-color: #feb3ad;
+		}
+		caption {
+			text-align: center;
+			vertical-align: middle;
+			
+			font-size: xx-large;
+			
+			border-bottom: double;
+			padding: 30px;
+			
+			background-color: #ffffff;
+		}
+		tbody {
+			/* background-color: #feb3ad; */
+		}
+		tr, td {
+			border-bottom: 1px solid #444444;
+			border-top: 1px solid #feb3ad;
+			border-right: 1px solid #ffffff;
+			padding: 10px;
+		}
+		.contents {
+			vertical-align: top;
+		}
+		.hobby {
+			border: none;
+			width: 100%;
+		}
+		.hobby td {
+			width: auto;
+			border: none;
+		}
+		.footer td {
+			margin: auto;
+			text-align: center;
+		}
+		.star {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	
+	<form action="" method="get" >
+	<table>
+		<caption>회원 정보 입력</caption>
+		<tbody>
+		<tr>
+			<td>ID</td>
+			<td colspan="4">
+				<input type="text" name="id" id="id" placeholder="아이디을 입력하세요" required>
+				<span class="star">*</span></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td colspan="4">
+				<input type="password" name="pw" placeholder="비밀번호를 입력하세요" required>
+				<span class="star">*</span></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td colspan="4">
+				<input type="text" name="name" id="name" placeholder="이름을 입력하세요" required>
+				<span class="star">*</span></td>
+		</tr>
+		<tr>
+			<td>Phone</td>
+			<td colspan="4">
+				<select size="1">
+					<option value="op1">010</option>
+					<option value="op1">011</option>
+					<option value="op1">012</option>
+					<option value="op1">016</option>
+					<option value="op1">018</option>
+					<option value="op1">019</option>
+					<option value="op1">02</option>
+					<option value="op1">031</option>
+					<option value="op1">032</option>
+				</select>
+				-
+				<input type="text" name="phone_middle">
+				-
+				<input type="text" name="phone_last">
+			</td>
+		</tr>
+		<tr>
+			<td>Birthday</td>
+			<td colspan="4">
+				<input type="datetime-local" name="birth"></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td colspan="4">
+				<input type="email" maxlength="30" size="20"></td>
+		</tr>
+		<tr>
+			<td>Hobby</td>
+			<td colspan="4">
+				<table class="hobby">
+					<tr>
+					<td>독서
+						<input type="checkbox" name="hobby" value="chk1"></td>
+					<td>음악감상
+						<input type="checkbox" name="hobby" value="chk2"></td>
+					<td>게임
+						<input type="checkbox" name="hobby" value="chk3"></td>
+					<td>등산
+						<input type="checkbox" name="hobby" value="chk4"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>	
+		<tr>
+			<td>Gender</td>
+			<td colspan="4">
+				<input type="radio" name="gender" value="F" checked="checked">여자
+				<input type="radio" name="gender" value="M">남자</td>
+		</tr>	
+		<tr>
+			<td>Job</td>
+			<td colspan="4">
+				<select size="1" multiple>
+					<option value="op1">선택하세요</option>
+					<option value="op1">회사원</option>
+					<option value="op1">군인</option>
+					<option value="op1">공무원</option>
+					<option value="op1">개발자</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="contents">Contents</td>
+			<td colspan="4">
+				<textarea rows="5" cols="50">프로필</textarea></td>
+		</tr>
+		<tr>
+			<td>Attached file</td>
+			<td colspan="4">
+				<input type="file" name="file"></td>
+		</tr>
+		<tr class="footer">
+			<td colspan="5">
+				<input type="submit" value="회원가입">
+				<input type="reset" value="가입취소">
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	</form>
+</body>
+</html>
